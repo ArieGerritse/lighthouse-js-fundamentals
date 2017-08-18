@@ -1,9 +1,14 @@
-var iceCreamFlavours = ["chocolate", "vanilla", "cookies and cream", "rocky road", "strawberry"];
-console.log(iceCreamFlavours)
+function loopyLighthouse(range, multiples, words){
+  for(var count = range[0]; count < range[1]; count++){
+    if (count % multiples[0] === 0 && count % multiples[1] === 0)
+      console.log(words[0]+words[1]);
+    else if (count % multiples[0] === 0)
+      console.log(words[0]);
+    else if (count % multiples[1] === 0)
+      console.log(words[1]);
+    else
+      console.log(count);
+  }
+}
 
-iceCreamFlavours.push('root beer');
-console.log(iceCreamFlavours);
-console.log(iceCreamFlavours[0]);
-
-console.log(iceCreamFlavours[5]);
-console.log(iceCreamFlavours.length);
+loopyLighthouse([10, 20],[2, 3],['RAGE', 'monster']);
